@@ -1,59 +1,90 @@
 
-let a = 1;
- a = 2;
-console.log(a);
+
+
+// // male na name nikalvana che
  
-// // using const 
-// // it will thorw a nd error because we cnat change the value once we declare
-//                 // const a = 1;
-//                 //  a = 2;
-//                 // console.log(a);
-    
+const personArray = ["prem" ,"kirat" , "harsh" ,"dhruvi"];
+const genderArray = ["male" , "male" , "male" ,"female"];
 
 
 
-// // 
 
-// // let firstName = "dhruvi";
-// // let age = "22";
-// // let isMarried = "no ";
-
-// // console.log("this persone name is" + firstName +" her age is " + age + isMarried + "she is not married" );
-
-
-
-// // priniting firstname and last name in dumb way 
-
-let firstName = "dhruvi";
-let lastName = "desai";
-
-console.log(firstName + lastName);
-
-
-// // loops 
-
-
-
-// let firstName = "dhruvi";
-// let age = 22 ;
-// let isMarried = "false ";
-
-
-// // if/else
-
-if(isMarried == true){
-    console.log(firstName + "is married");
-}
-else{
-    
-    console.log(firstName + "is not married");
+for(let i = 0; i<personArray.length; i++){
+    if(genderArray[i] == "male"){
+        console.log(personArray[i]);
+    }
 }
 
 
-// print 1 to 100 by for loop 
-let answer = 0
+// // functions
 
-for(let i = 0; i<=100; i++){
-        answer= answer + i;
+function sum (a ,b){
+    //  input and return is output
+    return a+b ;
 }
-console.log(answer);
+
+// const value = sum(1 , 2)
+// console.log(value);
+
+
+// call back function
+
+function sum(num1, num2) {
+let result = num1 + num2;
+return result;
+}
+
+function displayResult(data) {
+console.log("Result of the sum is : " + data);
+return data;
+}
+
+function displayResultPassive(data) {
+console.log("Sum's result is : " + data);
+}
+
+console.log(displayResult(sum(3, 5)));
+
+function calculateArithmetic(a ,b , type){
+        if(type == "sum"){
+            const value = sum(a, b);
+            return value;
+        }
+
+        if(type == "minus"){
+            const value = sub(a , b);
+            return value;
+
+        }
+}
+
+ function sum( a, b){
+    return a + b;
+ }
+
+ function sub(a,b){
+    return a - b;
+ }
+
+ const value = calculateArithmetic (1,2, "minus");
+ console.log(value);
+
+
+
+
+
+//  setTimeOut
+
+    function greet(a , b){
+        console.log("hello dhruvi");
+    }
+
+    setTimeout(greet , 1 * 1000);
+
+// setInterval
+
+        function greet(a , b){
+        console.log("hello dhruvi");
+    }
+
+    setInterval(greet , 1 * 1000);
